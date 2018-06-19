@@ -1,0 +1,13 @@
+[user]
+	email = gou4shi1@qq.com
+	name = gou4shi1
+[push]
+	default = simple
+[http]
+	proxy = socks5://127.0.0.1:1080
+[https]
+	proxy = socks5://127.0.0.1:1080
+[core]
+	editor = vim
+[github]
+	user = gou4shi1

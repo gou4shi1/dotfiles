@@ -1,0 +1,14 @@
+"""""""""""""""""""""""""""""" 映射
+" 交换几个键方便浏览
+nnoremap d <C-d>
+nnoremap <C-d> d
+nnoremap u <C-u>
+nnoremap <C-u> u
+" 默认leader为\
+let mapleader = ","
+" no_hight_light
+nnoremap <Leader>nh :noh<CR>
+"""""""""""""""""""""""""""""" 外部编辑器
+" 默认配置是gvim -f 
+" 取消注释下面这行将改为用vim
+"set editor="gnome-terminal --disable-factory -x vim"

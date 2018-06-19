@@ -1,0 +1,18 @@
+"""""""""""""""""""""""""""""" 映射
+" 交换几个键方便浏览
+" scroll
+mnoremap d <C-d>
+mnoremap u <C-u>
+" delete
+nnoremap D d
+nnoremap d <Nop>
+nnoremap <C-d> D
+" tab
+nnoremap <C-n> gt
+nnoremap gt <C-n>
+nnoremap <C-p> gT
+nnoremap gT <C-p>
+" 默认leader为\
+let mapleader = ","
+" no_hight_light
+nnoremap <Leader>nh :noh<CR>
