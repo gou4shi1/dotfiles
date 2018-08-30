@@ -130,6 +130,9 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # leetcode
 alias lc=leetcode
+alias slc="ss leetcode"
+alias slcp="ss leetcode pick -gxl cpp"
+alias slcs="ss leetcode submit"
 
 #so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
 stty -ixon
