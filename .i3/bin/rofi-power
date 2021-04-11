@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+OPTIONS="Lock\nReboot\nPoweroff\nSuspend\nHibernate"
+
+LAUNCHER="rofi -width 10 -lines 5 -dmenu -i -p power"
+LOCKER="gnome-screensaver-command -l"
+
+option=`echo -e $OPTIONS | $LAUNCHER | awk '{print $1}' | tr -d '\r\n'`
+if [ ${#option} -gt 0 ]; then
+    case $option in
+      Lock)
+        $LOCKER
+        ;;
+      Reboot)
+        systemctl reboot
+        ;;
+      Poweroff)
+        systemctl poweroff
+        ;;
+      Suspend)
+        $LOCKER && systemctl suspend
+        ;;
+      Hibernate)
+        $LOCKER && systemctl hibernate
+        ;;
+      *)
+        ;;
+    esac
+fi
