@@ -153,7 +153,6 @@ export BAT_THEME="Nord"
 
 # rmtrash
 alias del='rmtrash'
-alias rm='echo -e "Please use \033[32mdel\033[0m or \033[32mrmtrash\033[0m instead!\nIf you are removing files without hope, you can use \033[31m\\\rm\033[0m instead!"; false'
 
 {% if yadm.class == "jc" %}
 # ros
