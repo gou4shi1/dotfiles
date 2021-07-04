@@ -65,7 +65,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( git vi-mode z extract sudo debian systemd command-not-found colored-man-pages fzf zsh-syntax-highlighting history-substring-search zsh_reload bazel )
+plugins=( git zsh-vi-mode z extract sudo debian systemd command-not-found colored-man-pages fzf zsh-syntax-highlighting history-substring-search zsh_reload bazel )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -146,6 +146,22 @@ alias lg="lazygit"
 # vim
 alias v=vim
 alias gv=gvim
+
+# zsh-vi-mode
+export ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
+function zvm_after_init() {
+    zvm_bindkey viins "^[[H" beginning-of-line
+    zvm_bindkey viins  "^[[F" end-of-line
+    zvm_bindkey vicmd "^[[H" beginning-of-line
+    zvm_bindkey vicmd "^[[F" end-of-line
+    zvm_bindkey visual "^[[H" beginning-of-line
+    zvm_bindkey visual "^[[F" end-of-line
+
+    zvm_bindkey viins "^[[A" history-substring-search-up
+    zvm_bindkey viins "^[[B" history-substring-search-down
+
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+}
 
 # bat, a replacement of cat
 export BAT_THEME="Nord"
