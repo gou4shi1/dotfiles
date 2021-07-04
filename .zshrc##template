@@ -143,6 +143,12 @@ alias au="arc diff HEAD~ --update"
 alias al="arc land"
 alias lg="lazygit"
 
+# git-fuzzy
+export GF_LOG_MENU_PARAMS='--pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --topo-order'
+export GF_DIFF_COMMIT_PREVIEW_DEFAULTS="--patch-with-stat"
+export GF_DIFF_COMMIT_RANGE_PREVIEW_DEFAULTS="--summary"
+export GF_DIFF_FILE_PREVIEW_DEFAULTS="--indent-heuristic"
+
 # vim
 alias v=vim
 alias gv=gvim
