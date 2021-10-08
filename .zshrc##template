@@ -175,6 +175,9 @@ export BAT_THEME="Nord"
 # rm with trash bin
 alias del='rmtrash'
 
+# cmake
+export CMAKE_EXPORT_COMPILE_COMMANDS=ON
+
 {% if yadm.class == "jc" %}
 # ros
 ros() {
