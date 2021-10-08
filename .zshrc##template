@@ -65,7 +65,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( git zsh-vi-mode z extract sudo debian systemd command-not-found colored-man-pages fzf zsh-syntax-highlighting history-substring-search zsh_reload bazel )
+plugins=( git zsh-vi-mode z extract sudo debian systemd command-not-found colored-man-pages fzf zsh-syntax-highlighting history-substring-search bazel )
 
 source $ZSH/oh-my-zsh.sh
 
