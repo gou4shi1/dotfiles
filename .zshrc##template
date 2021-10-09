@@ -185,17 +185,9 @@ ros() {
 }
 
 # gibraltar
-gibraltar-fast() {
+gibraltar() {
     source ~/temp/gde.sh no_extra_opt_jc
     export JC_CAR_ID=GZU_SPY_10036
-}
-gibraltar() {
-    current_dir=$(pwd)
-    cd ~/gibraltar
-    JC_OVERRIDE_CURRENT_COUNTRY_CODE=CN JC_SETUP_SKIP_ROS_LOCATIONS_LOOKUP=1 JC_SETUP_SKIP_ROS_PYTHONPATH_LOOKUP=1 source setup.bash
-    # source tf_cuda_setup.bash
-    gibraltar-fast
-    cd $current_dir
 }
 gibraltar-update-all-pip3-deps() {
     current_dir=$(pwd)
@@ -227,7 +219,7 @@ post-gde() {
     sudo apt install vim
     sudo dpkg -i ~/Downloads/ripgrep_12.1.1_amd64.deb
 }
-gibraltar-fast
+gibraltar
 
 # vim pack
 alias pack="LD_LIBRARY_PATH=/opt/openssl-1.1.1c:${LD_LIBRARY_PATH} pack"
